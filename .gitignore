@@ -111,10 +111,8 @@ target/
 
 node_modules/
 bower_components/
-*.log
 
 build/
-dist/
 
 #####=== Vagrant ===#####
 .vagrant/
@@ -123,7 +121,6 @@ dist/
 
 # Logs
 logs
-*.log
 
 # Runtime data
 pids
@@ -218,6 +215,9 @@ media/
 # File types:
 *.sqlite3
 *.db
+*.png
+*.jpg
+*.jpeg
 
 # Configuration file with private data:
 *.env
