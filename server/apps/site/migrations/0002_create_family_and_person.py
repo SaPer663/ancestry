@@ -5,6 +5,7 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    """ Migration create  models Family and Person """
     dependencies = [
         ('site', '0001_initial'),
     ]
