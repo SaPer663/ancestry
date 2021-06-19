@@ -5,8 +5,9 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
+    """ Migration add `related_name` to fields `id_husband` and 'id-wife` """
     dependencies = [
-        ('site', '0002_auto_20210609_1313'),
+        ('site', '0002_create_family_and_person'),
     ]
 
     operations = [
