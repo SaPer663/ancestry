@@ -1,12 +1,14 @@
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
+from .models import Family
+
 
 def index(request: HttpRequest) -> HttpResponse:
     """
     Main (or index) view.
 
     Returns rendered default page to the user.
-    Typed with the help of ``django-stubs`` project.
     """
-    return render(request, 'main/index.html')
+    family: Family = Family.objects.all()
+    return render(request, 'main/index.html', {'family': family})
