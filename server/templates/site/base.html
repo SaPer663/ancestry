@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock title %}</title>
+  {% block stylesheet %}
+  <link href="{% static '/main/css/style.css' %}" rel="stylesheet">
+  <link href="https://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css">
+  {% endblock stylesheet %}
+</head>
+<body
+  class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-4 ns-subject page-Открытый_список_Заглавная_страница rootpage-Открытый_список_Заглавная_страница skin-openlist action-view">
+<div class=" article-ru-2555680" id="wrapper">
+  <header id="mw-head">
+    <div class="container">
+      <div class="header-padding">
+        <nav id="sitenav">
+          <ul class="links" role="menubar">
+            <li>
+              <a href="">О проекте</a>
+            </li>
+            <li>
+              <a href="">Добавить человека</a>
+            </li>
+          </ul>
+        </nav>
+        <nav id="siteacc">
+          <ul class="links">
+            <li id="pt-createaccount">
+              <a href="registration.html">Зарегистрироваться</a>
+            </li>
+            <li id="pt-login">
+              <a href="">Войти</a>
+            </li>
+          </ul>
+        </nav><!-- /0 -->
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <div id="p-search">
+    <div class="container">
+      <div class="header-padding">
+        <div class="search-left">
+          <div id="search-top" role="search">
+            <form action="/index.php" id="searchform" name="searchform">
+              <div class="search-group">
+                <input accesskey="f" autocomplete="off" id="searchInput" name="search"
+                       placeholder="Введите имя" title="" value=""> <input class="searchButton"
+                                                                           id="mw-searchButton"
+                                                                           name="fulltext" title=""
+                                                                           type="submit" value="Найти">
+              </div>
+              <div class="search-selector">
+                <a href="">Расширенный поиск</a> <span id="search-help-button"
+                                                       style="cursor:pointer; border-bottom:1px dashed white; margin-left:1.5em;">Примеры</span>
+              </div>
+            </form>
+          </div><!-- /0 -->
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!-- content -->
+  {% block content %}
+  {% endblock %}
+  <!-- /content -->
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="col">
+        <a href=""><img alt="Мемориал" src="" style="float:left; margin:0 10px 20px 0;"></a> В основе материалов<br>
+        сайта — данные <a href="">Международного<br>
+        Мемориала</a>.
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-facebook-official"></i>Facebook</a>
+          </li>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-vk"></i>ВКонтакте</a>
+          </li>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-instagram"></i>Instagram</a>
+          </li>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-envelope"></i>info@openlist.wiki</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a href="">Отказ от ответственности</a>
+          </li>
+          <li>
+            <a href="">Условия использования</a>
+          </li>
+          <li>
+            <a href="">Источники данных</a>
+          </li>
+          <li>
+            <a href="">Спецстраницы</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a href="">Открытый список</a>
+          </li>
+        </ul>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+  </footer><!-- /footer -->
+</div>
+
+
+</body>
+</html>
