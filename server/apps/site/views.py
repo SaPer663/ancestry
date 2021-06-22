@@ -10,5 +10,5 @@ def index(request: HttpRequest) -> HttpResponse:
 
     Returns rendered default page to the user.
     """
-    family: Family = Family.objects.all()
-    return render(request, 'main/index.html', {'family': family})
+    families: Family = Family.objects.all()
+    return render(request, 'site/index.html', {'families': families})

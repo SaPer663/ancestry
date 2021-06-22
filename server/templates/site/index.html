@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="client-js" dir="ltr" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Семейный архив</title>
+  <link href="{% static '/main/css/style.css' %}" rel="stylesheet">
+  <link href="https://allfont.ru/allfont.css?fonts=b52" rel="stylesheet" type="text/css">
+</head>
+<body
+  class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-4 ns-subject page-Открытый_список_Заглавная_страница rootpage-Открытый_список_Заглавная_страница skin-openlist action-view">
+<div class=" article-ru-2555680" id="wrapper">
+  <header id="mw-head">
+    <div class="container">
+      <div class="header-padding">
+        <nav id="sitenav">
+          <ul class="links" role="menubar">
+            <li>
+              <a href="">О проекте</a>
+            </li>
+            <li>
+              <a href="">Добавить человека</a>
+            </li>
+          </ul>
+        </nav>
+        <nav id="siteacc">
+          <ul class="links">
+            <li id="pt-createaccount">
+              <a href="registration.html">Зарегистрироваться</a>
+            </li>
+            <li id="pt-login">
+              <a href="">Войти</a>
+            </li>
+          </ul>
+        </nav><!-- /0 -->
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <div id="p-search">
+    <div class="container">
+      <div class="header-padding">
+        <div class="search-left">
+          <div id="search-top" role="search">
+            <form action="/index.php" id="searchform" name="searchform">
+              <div class="search-group">
+                <input accesskey="f" autocomplete="off" id="searchInput" name="search"
+                       placeholder="Введите имя" title="" value=""> <input class="searchButton"
+                                                                           id="mw-searchButton"
+                                                                           name="fulltext" title=""
+                                                                           type="submit" value="Найти">
+              </div>
+              <div class="search-selector">
+                <a href="">Расширенный поиск</a> <span id="search-help-button"
+                                                       style="cursor:pointer; border-bottom:1px dashed white; margin-left:1.5em;">Примеры</span>
+              </div>
+            </form>
+          </div><!-- /0 -->
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!-- content -->
+  {% block content %}
+  <div class="mw-body" id="content">
+    <div class="container">
+      <div class="left-column" id="page">
+        <div id="page-content">
+          <main id="main-content">
+            <div id="bodyContent">
+              <article>
+                <header>
+                  <h1 id="h1">Семейный архив</h1>
+                </header>
+                <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="ru">
+                  <div class="mw-parser-output">
+                    <p><a href="" title="100%"><img alt="100%" data-file-fullurl=""
+                                                    data-file-height="413" data-file-width="1280"
+                                                    height="413" src="mainFoto.png"
+                                                    width="1280"></a></p>
+                    <p>
+                      <big style="margin: 20px 0; font-size: 22px; display: block; line-height: 140%;">«Семейный
+                        архив» — собрание фактов, воспоминаний из биографий наших родственников,
+                        собранные нами для нас и наших детей.</big></p>
+                    <div id="frontpage-cols">
+                      <ul class="gallery mw-gallery-traditional">
+                        {% for family in families %}
+                        <li class="gallerybox" style="width: 155px">
+                          <div style="width: 155px">
+                            <a href="">{{ family.surname }}</a>
+                          </div>
+                        </li>
+                        {% endfor %}
+                      </ul>
+
+                      <div class="mxgraph" style="max-width:100%;border:1px solid transparent;"
+                           data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2021-04-26T16:48:04.533Z\&quot; agent=\&quot;5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36\&quot; etag=\&quot;P-_ucqifiphLP3v1svrm\&quot; version=\&quot;14.6.6\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;97916047-d0de-89f5-080d-49f4d83e522f\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                      <script type="text/javascript"
+                              src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+
+
+                      <div style="clear:both"></div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div>
+              </article>
+              <div id="ya-share" style="display:none;">
+                <div style="float:left; margin-right:10px;">
+                  Поделиться:
+                </div>
+                <div class="ya-share2 ya-share2_inited" data-services="vkontakte,facebook"
+                     data-size="s">
+                  <div
+                    class="ya-share2__container ya-share2__container_size_s ya-share2__container_color-scheme_normal ya-share2__container_shape_normal">
+                    <ul class="ya-share2__list ya-share2__list_direction_horizontal">
+                      <li class="ya-share2__item ya-share2__item_service_vkontakte">
+                        <a class="ya-share2__link" href="" rel="nofollow noopener"
+                           target="_blank" title="ВКонтакте">
+                                                        <span class="ya-share2__badge">
+                                                            <span class="ya-share2__icon"></span>
+                                                        </span>
+                          <span class="ya-share2__title">ВКонтакте</span>
+                        </a>
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_facebook">
+                        <a class="ya-share2__link" href="" rel="nofollow noopener"
+                           target="_blank" title="Facebook">
+                                                        <span class="ya-share2__badge">
+                                                            <span class="ya-share2__icon"></span>
+                                                        </span>
+                          <span class="ya-share2__title">Facebook</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <aside id="sidebar">
+        <div class="sidebar-box">
+          <div class="portal"
+               id="p-.D0.9F.D0.BE.D0.BC.D0.BE.D1.87.D1.8C_.D0.BF.D1.80.D0.BE.D0.B5.D0.BA.D1.82.D1.83">
+            <h2>Помочь проекту</h2>
+            <ul>
+              <li>
+                <a href="">Как добавить данные</a>
+              </li>
+              <li>
+                <a href="">Как пожертвовать</a>
+              </li>
+              <li>
+                <a href="">Правка формуляров</a>
+              </li>
+              <li>
+                <a href="">Поиск дублей</a>
+              </li>
+              <li>
+                <a href="">Объединение дублей</a>
+              </li>
+              <li>
+                <a href="">Присоединение фотографий</a>
+              </li>
+            </ul>
+          </div>
+          <div class="portal" id="p-navigation">
+            <h2>Навигация</h2>
+            <ul>
+              <li>
+                <a href="">Категории данных</a>
+              </li>
+              <li>
+                <a href="">Случайная статья</a>
+              </li>
+              <li>
+                <a href="">Новые страницы</a>
+              </li>
+              <li>
+                <a href="">Свежие правки</a>
+              </li>
+            </ul>
+          </div>
+          <div class="portal" id="p-.D0.9C.D1.8B_.D0.B2_.D1.81.D0.BE.D1.86.D1.81.D0.B5.D1.82.D1.8F.D1.85">
+            <h2>Мы в соцсетях</h2>
+            <ul>
+              <li>
+                <a href=""><i aria-hidden="true" class="fa fa-facebook-official"></i>Facebook</a>
+              </li>
+              <li>
+                <a href=""><i aria-hidden="true" class="fa fa-vk"></i>ВКонтакте</a>
+              </li>
+              <li>
+                <a href=""><i aria-hidden="true" class="fa fa-instagram"></i>Instagram</a>
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="sidebar-box-after"></div>
+      </aside>
+      <div class="clear"></div>
+    </div>
+  </div>
+  {% endblock %}
+  <!-- /content -->
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="col">
+        <a href=""><img alt="Мемориал" src="" style="float:left; margin:0 10px 20px 0;"></a> В основе материалов<br>
+        сайта — данные <a href="">Международного<br>
+        Мемориала</a>.
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-facebook-official"></i>Facebook</a>
+          </li>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-vk"></i>ВКонтакте</a>
+          </li>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-instagram"></i>Instagram</a>
+          </li>
+          <li>
+            <a href=""><i aria-hidden="true" class="fa fa-envelope"></i>info@openlist.wiki</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a href="">Отказ от ответственности</a>
+          </li>
+          <li>
+            <a href="">Условия использования</a>
+          </li>
+          <li>
+            <a href="">Источники данных</a>
+          </li>
+          <li>
+            <a href="">Спецстраницы</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <a href="">Открытый список</a>
+          </li>
+        </ul>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+  </footer><!-- /footer -->
+</div>
+
+
+</body>
+</html>
