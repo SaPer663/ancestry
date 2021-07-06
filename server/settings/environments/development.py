@@ -41,7 +41,7 @@ INSTALLED_APPS += (
     'django_test_migrations.contrib.django_checks.AutoNames',
     # This check might be useful in production as well,
     # so it might be a good idea to move `django-test-migrations`
-    # to prod dependencies and use this check in the main `settings.py`.
+    # to prod dependencies and use this check in the site `settings.py`.
     # This will check that your database is configured properly,
     # when you run `python manage.py check` before deploy.
     'django_test_migrations.contrib.django_checks.DatabaseConfiguration',
