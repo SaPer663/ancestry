@@ -25,16 +25,13 @@
                 <div class="col">
                   <div class="tabs">
                     <div class="tab">
-                      <a href="">{{ family.id_husband.surname }} {{ family.id_husband.name }} </a>
-                      {% if family.id_wife is not None %}
-                      <a href="">{{ family.id_wife.surname }} {{ family.id_wife.name }}</a>
-                      {% endif %}
+                      <a href="">{{ family.surname }} </a>
 
                       <div class="tab-label">
                         <i class="bi bi-chevron-right"></i>
                       </div>
-                      {% get_children family %}
 
+                      {% show_family_composition None family %}
 
                       <!--<div class="tab-content">
                         {% for family in families %}

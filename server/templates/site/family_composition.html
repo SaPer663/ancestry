@@ -1,26 +1,26 @@
 {% load tags %}
 
-
-{% for family in families %}
-{% if family.partner is not None %}
-<a href="">{{ family.partner.surname }} {{ family.partner.name }}</a>
-{% endif %}
-{% if family.children|length > 0 %}
-<ul class="my-ul">
-  {% for child in family.children %}
-  <li class="my-li">
-    <div class="tab">
-      <a href="">{{ child.name }}</a>
-      {% if not child.is_alone %}
-      <div class="tab-label">
-        <i class="bi bi-chevron-right"></i>
+<div class="tab-content">
+  {% for family in families %}
+  {% if family.partner is not None %}
+  <a href="">{{ family.partner.surname }} {{ family.partner.name }}</a>
+  {% endif %}
+  {% if family.children|length > 0 %}
+  <ul class="my-ul">
+    {% for child in family.children %}
+    <li class="my-li">
+      <div class="tab">
+        <a href="">{{ child.name }}</a>
+        {% if not child.is_alone %}
+        <div class="tab-label">
+          <i class="bi bi-chevron-right"></i>
+        </div>
+        {% show_family_composition child None %}
+        {% endif %}
       </div>
-      {% show_family_composition child %}
-      {% endif %}
-    </div>
-  </li>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
   {% endfor %}
-</ul>
-{% endif %}
-{% endfor %}
-
+</div>
