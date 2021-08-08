@@ -26,13 +26,12 @@ ALLOWED_HOSTS = [
     '[::1]',
 ]
 
-
 # Installed apps for development only:
 
 INSTALLED_APPS += (
     # Better debug:
     'debug_toolbar',
-    'nplusone.ext.django',
+    # 'nplusone.ext.django',
 
     # Linting migrations:
     'django_migration_linter',
@@ -50,12 +49,10 @@ INSTALLED_APPS += (
     'extra_checks',
 )
 
-
 # Static files:
 # https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-STATICFILES_DIRS
 
 STATICFILES_DIRS: List[str] = []
-
 
 # Django debug toolbar:
 # https://django-debug-toolbar.readthedocs.io
@@ -81,9 +78,15 @@ DEBUG_TOOLBAR_CONFIG = {
 
 # This will make debug toolbar to work with django-csp,
 # since `ddt` loads some scripts from `ajax.googleapis.com`:
-CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com')
-CSP_IMG_SRC = ("'self'", 'data:')
-CSP_CONNECT_SRC = ("'self'",)
+CSP_SCRIPT_SRC = ("'self'", 'ajax.googleapis.com', 'https://kit.fontawesome.com/112c6064b2.js')
+# CSP_IMG_SRC = ("'self'", 'data:')
+CSP_CONNECT_SRC = ("'self'", 'https://ka-f.fontawesome.com/releases/v5.15.3/css/free.min.css',
+                   'https://ka-f.fontawesome.com/releases/v5.15.3/css/free-v4-shims.min.css',
+                   'https://ka-f.fontawesome.com/releases/v5.15.3/css/free-v4-font-face.min.css',)
+CSP_INCLUDE_NONCE_IN = ('script-src', 'style-scr',)
+CSP_STYLE_SRC = ("'self'", 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css',
+                 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css',)
+# CSP_DEFAULT_SRC = ("'unsafe-inline'",)
 
 
 # nplusone
@@ -91,8 +94,8 @@ CSP_CONNECT_SRC = ("'self'",)
 
 # Should be the first in line:
 MIDDLEWARE = (  # noqa: WPS440
-    'nplusone.ext.django.NPlusOneMiddleware',
-) + MIDDLEWARE
+                 # 'nplusone.ext.django.NPlusOneMiddleware',
+             ) + MIDDLEWARE
 
 # Logging N+1 requests:
 NPLUSONE_RAISE = True  # comment out if you want to allow N+1 requests
@@ -102,7 +105,6 @@ NPLUSONE_WHITELIST = [
     {'model': 'admin.*'},
 ]
 
-
 # django-test-migrations
 # https://github.com/wemake-services/django-test-migrations
 
@@ -110,7 +112,6 @@ NPLUSONE_WHITELIST = [
 DTM_IGNORED_MIGRATIONS = frozenset((
     ('axes', '*'),
 ))
-
 
 # django-extra-checks
 # https://github.com/kalekseev/django-extra-checks

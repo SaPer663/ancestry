@@ -1,0 +1,8 @@
+{% load tags %}
+
+<div class="tab-content">
+  {% for child in children %}
+  {% show_family_composition child %}
+  {% endfor %}
+</div>
+

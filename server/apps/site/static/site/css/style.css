@@ -1849,7 +1849,7 @@ div.floatright, table.floatright, div.floatleft, table.floatleft {
     border: 1px solid  #35331E; /*#8a2f30;*/
     border-radius: 0 .4em .4em 0;
     background-color: transparent;
-    
+
     background: hsla(55, 27%, 19%, 1);
     background: linear-gradient(90deg, hsla(55, 27%, 19%, 1) 15%, hsla(55, 27%, 48%, 1) 100%, hsla(55, 27%, 48%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(55, 27%, 19%, 1) 15%, hsla(55, 27%, 48%, 1) 100%, hsla(55, 27%, 48%, 1) 100%);
@@ -1891,7 +1891,7 @@ div.floatright, table.floatright, div.floatleft, table.floatleft {
     line-height: 1;
     box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.18);
     background: #71683A;
-    
+
     background: hsla(55, 27%, 19%, 1);
     background: linear-gradient(90deg, hsla(55, 27%, 19%, 1) 0%, hsla(50, 32%, 34%, 1) 0%, hsla(50, 31%, 19%, 1) 100%);
     background: -moz-linear-gradient(90deg, hsla(55, 27%, 19%, 1) 0%, hsla(50, 32%, 34%, 1) 0%, hsla(50, 31%, 19%, 1) 100%);
@@ -3454,7 +3454,7 @@ my style
 
  .my-ul {
     margin-block-start: 0em;
-    margin: 0 0 0 1.6em !important;
+    margin: 0 0 0 -0.1em !important;
  }
 
  .my-li {
@@ -3484,33 +3484,18 @@ my style
 	 overflow: hidden;
 }
  .tab-label {
-	 /*display: flex;*/
+	 display: inline-block;
+	 color: black;
 	 justify-content: space-between;
-	 padding: 1em;
+	 padding-left: 1em;
 	 /*background: #2c3e50;
 	 font-weight: bold;*/
 	 cursor: pointer;
 	/* Icon */
 }
- .tab-label:hover {
-	 /*background: #1a252f;*/
-}
- .tab-label::before {
-	 /*content: "\276F";*/
-	 font: normal normal normal 10px/1 FontAwesome;
-     content: "\f105";
-     color: black;
-	 width: 1em;
-	 height: 1em;
-	 text-align: center;
-	 transition: all 0.35s;
-}
  .tab-content {
-	 max-height: 0;
-	 /*padding: 0 1em;*/
-	 color: #2c3e50;
-	 /*background: white;*/
-	 transition: all 0.35s;
+	 display: none;
+	 margin-left: 1em;
 }
  .tab-close {
 	 display: flex;
@@ -3522,18 +3507,6 @@ my style
 }
  .tab-close:hover {
 	 /*background: #1a252f;*/
-}
-
- input:checked + .tab-label {
-	 /*background: #1a252f;*/
-}
- input:checked + .tab-label::before {
-	 /*transform: rotate(90deg);*/
-	 content: "\f107"
-}
- input:checked ~ .tab-content {
-	 max-height: 100%;
-	 /*padding: 1em 0;*/
 }
 
 /*
@@ -3548,42 +3521,42 @@ background: -webkit-linear-gradient(90deg, hsla(214, 45%, 39%, 1) 0%, hsla(58, 4
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#375F92", endColorstr="#5C5A27", GradientType=1 );
 */
 /*
- CSS HEX 
+ CSS HEX
 --bdazzled-blue: #375d91ff;
 --iceberg: #6ca3ccff;
 --army-green: #565326ff;
 --vegas-gold: #ccb16aff;
 --nickel: #797b75ff;
 
- CSS HSL 
+ CSS HSL
 --bdazzled-blue: hsla(215, 45%, 39%, 1);
 --iceberg: hsla(206, 48%, 61%, 1);
 --army-green: hsla(56, 39%, 24%, 1);
 --vegas-gold: hsla(43, 49%, 61%, 1);
 --nickel: hsla(80, 3%, 47%, 1);
 
- SCSS HEX 
+ SCSS HEX
 $bdazzled-blue: #375d91ff;
 $iceberg: #6ca3ccff;
 $army-green: #565326ff;
 $vegas-gold: #ccb16aff;
 $nickel: #797b75ff;
 
- SCSS HSL 
+ SCSS HSL
 $bdazzled-blue: hsla(215, 45%, 39%, 1);
 $iceberg: hsla(206, 48%, 61%, 1);
 $army-green: hsla(56, 39%, 24%, 1);
 $vegas-gold: hsla(43, 49%, 61%, 1);
 $nickel: hsla(80, 3%, 47%, 1);
 
- SCSS RGB 
+ SCSS RGB
 $bdazzled-blue: rgba(55, 93, 145, 1);
 $iceberg: rgba(108, 163, 204, 1);
 $army-green: rgba(86, 83, 38, 1);
 $vegas-gold: rgba(204, 177, 106, 1);
 $nickel: rgba(121, 123, 117, 1);
 
- SCSS Gradient 
+ SCSS Gradient
 $gradient-top: linear-gradient(0deg, #375d91ff, #6ca3ccff, #565326ff, #ccb16aff, #797b75ff);
 $gradient-right: linear-gradient(90deg, #375d91ff, #6ca3ccff, #565326ff, #ccb16aff, #797b75ff);
 $gradient-bottom: linear-gradient(180deg, #375d91ff, #6ca3ccff, #565326ff, #ccb16aff, #797b75ff);

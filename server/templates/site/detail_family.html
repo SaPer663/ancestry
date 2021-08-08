@@ -1,0 +1,157 @@
+{% extends 'site/base.html' %}
+{% load tags %}
+{% load static %}
+{% block title %}Семья{% endblock title %}
+{% block content %}
+<!-- content -->
+<div class="left-column" id="page">
+  <div id="page-content">
+    <main id="main-content">
+      <div id="bodyContent">
+        <article>
+          <header>
+            <h1 id="h1">Семейный архив</h1>
+          </header>
+          <div class="mw-content-ltr" dir="ltr" id="mw-content-text" lang="ru">
+            <div class="mw-parser-output">
+              <p><a href="" title="100%"><img alt="100%" data-file-fullurl=""
+                                              data-file-height="413" data-file-width="1280"
+                                              height="213" src="collage.jpeg"
+                                              width="480"></a></p>
+              <p>
+                <big style="margin: 20px 0; text-align: center; font-size: 32px; display: block; line-height: 140%;">Лопаевы</big>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="tabs">
+                    <div class="tab">
+                      <a href="">{{ family.id_husband.surname }} {{ family.id_husband.name }} </a>
+                      {% if family.id_wife is not None %}
+                      <a href="">{{ family.id_wife.surname }} {{ family.id_wife.name }}</a>
+                      {% endif %}
+
+                      <div class="tab-label">
+                        <i class="bi bi-chevron-right"></i>
+                      </div>
+                      {% get_children family %}
+
+
+                      <!--<div class="tab-content">
+                        {% for family in families %}
+                        <p>
+                          <a href="">{{ family.partner.surname }} {{ family.partner.name }}</a>
+                        </p>
+                             {% for child in family.children %}
+                               <p>
+                                 <a href="">{{ child.name }}</a>
+                                 {% if not child.is_alone %}
+                                 <input class="my" id="{{ child.id }}" type="checkbox">
+                                 <label class="tab-label" for="{{ child.id }}"></label>
+                                 {% endif %}
+                               </p>
+                             {% endfor %}
+
+                        {% endfor %}-->
+                      <!--<ul class="my-ul">
+                          <li class="my-li">
+                              <div class="tab">
+                                  <a href="">Лопаев Миша</a>
+                                  <input class="my" id="chck11" type="checkbox">
+                                  <label class="tab-label" for="chck11"></label>
+                                  <div class="tab-content">
+                                      <a href="">Лопаева Татаьяна</a>
+                                      <ul class="my-ul">
+                                          <li class="my-li">
+                                              <div class="tab">
+                                                  <a href="">Лопаев Артём</a>
+                                                  <input class="my"
+                                                         id="chck111"
+                                                         type="checkbox">
+                                                  <label class="tab-label"
+                                                         for="chck111"></label>
+                                                  <div class="tab-content">
+                                                      <a href="">Лопаева
+                                                          Татьяна</a>
+                                                      <ul class="my-ul">
+                                                          <li class="my-li">
+                                                              <div class="tab">
+                                                                  <a href="">Лопаев
+                                                                      Денис</a>
+                                                              </div>
+                                                          </li>
+                                                      </ul>
+                                                      <a href="">Лопаева Катя</a>
+                                                  </div>
+                                              </div>
+                                          </li>
+                                          <li class="my-li">
+                                              <div class="tab">
+                                                  <a href="">Лопаев Кирилл</a>
+                                              </div>
+                                          </li>
+                                          <li class="my-li">
+                                              <div class="tab">
+                                                  <a href="">Лопаева Вера</a>
+                                                  <input class="my"
+                                                         id="chck112"
+                                                         type="checkbox">
+                                                  <label class="tab-label"
+                                                         for="chck112"></label>
+                                                  <div class="tab-content">
+                                                      <ul class="my-ul">
+                                                          <li class="my-li">
+                                                              <div class="tab">
+                                                                  <a href="">Лопаева
+                                                                      Полина</a>
+                                                              </div>
+                                                          </li>
+                                                          <li class="my-li">
+                                                              <div class="tab">
+                                                                  <a href="">Лопаев
+                                                                      Олег</a>
+                                                              </div>
+                                                          </li>
+                                                          <li class="my-li">
+                                                              <div class="tab">
+                                                                  <a href="">Лопаев
+                                                                      Андрей</a>
+                                                              </div>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </li>
+                                          <li class="my-li">
+                                              <div class="tab">
+                                                  <a href="">Лопаев Веня</a>
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </li>
+                          <li class="my-li">
+                              <div class="tab">
+                                  <a href="">Лопаева Лена</a>
+                                  <input class="my" id="chck12" type="checkbox">
+                                  <label class="tab-label" for="chck12"></label>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="catlinks catlinks-allhidden" data-mw="interface" id="catlinks"></div>
+        </article>
+      </div>
+    </main>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- /content -->
+{% endblock content %}
+

@@ -6,5 +6,5 @@ app_name = 'site'
 
 urlpatterns = [
     path('', views.index, name='home_page'),
-    path('<int:pk>/<slug:family>', views.detail_family, name='detail_family')
+    path('<int:id_family>', views.detail_family, name='detail_family')
 ]

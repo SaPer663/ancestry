@@ -50,7 +50,7 @@ INSTALLED_APPS: Tuple[str, ...] = (
 
 MIDDLEWARE: Tuple[str, ...] = (
     # Content Security Policy:
-    'csp.middleware.CSPMiddleware',
+    # 'csp.middleware.CSPMiddleware',
 
     # Django:
     'django.middleware.security.SecurityMiddleware',
