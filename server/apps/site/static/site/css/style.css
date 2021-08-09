@@ -3497,6 +3497,9 @@ my style
 	 display: none;
 	 margin-left: 1em;
 }
+ .partner {
+   display: none;
+ }
  .tab-close {
 	 display: flex;
 	 justify-content: flex-end;
