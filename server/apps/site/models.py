@@ -1,4 +1,4 @@
-from typing import Final, final
+from typing import Final, List, final
 
 from django.db import models
 from django.db.models import Q, QuerySet
@@ -48,14 +48,17 @@ class Family(models.Model):
     def save(self):
         super(Family, self).save()
         if not self.slug:
-            self.slug = slugify(self.surname, allow_unicode=True) + '-' + str(self.pk)
+            self.slug = slugify(
+                self.surname, allow_unicode=True
+            ) + '-' + str(self.pk)
             super(Family, self).save()
 
     @staticmethod
-    def get_partners(id_spouse: int) -> list:
+    def get_partners(id_spouse: int) -> List[QuerySet]:
         list_partners = []
-        families = Family.objects.filter(Q(id_husband=id_spouse) | Q(id_wife=id_spouse)) \
-            .select_related('id_husband', 'id_wife').order_by('id')
+        families = Family.objects.filter(
+            Q(id_husband=id_spouse) | Q(id_wife=id_spouse)
+        ).select_related('id_husband', 'id_wife').order_by('id')
         for family in families:
             if family.id_husband.id == id_spouse:
                 list_partners.append(family.id_wife)
