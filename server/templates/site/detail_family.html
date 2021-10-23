@@ -30,8 +30,9 @@
                       <div class="tab-label">
                         <i class="bi bi-chevron-right"></i>
                       </div>
-
-                      {% show_family_composition None family %}
+                      {% family_composition family as families %}
+                      {% include "site/family_composition.html" with
+                      families=families %}
 
                       <!--<div class="tab-content">
                         {% for family in families %}
